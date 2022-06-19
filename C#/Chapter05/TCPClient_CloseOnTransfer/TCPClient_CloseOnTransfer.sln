@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1800
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPClient_CloseOnTransfer", "TCPClient_CloseOnTransfer.csproj", "{C8C7D691-E867-4EDD-BC6A-E4D0E287FB0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8C7D691-E867-4EDD-BC6A-E4D0E287FB0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C7D691-E867-4EDD-BC6A-E4D0E287FB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C7D691-E867-4EDD-BC6A-E4D0E287FB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C7D691-E867-4EDD-BC6A-E4D0E287FB0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18BA004C-513F-4975-A081-BF4ABDBD2514}
+	EndGlobalSection
+EndGlobal
