@@ -136,7 +136,7 @@ DWORD WINAPI ClientMain(LPVOID arg)
 		// 데이터 보내기
 		retval = send(sock, buf, (int)strlen(buf), 0);
 		if (retval == SOCKET_ERROR) {
-			DisplayText("send()");
+			DisplayError("send()");
 			break;
 		}
 		DisplayText("[TCP 클라이언트] %d바이트를 보냈습니다.\r\n", retval);
@@ -144,7 +144,7 @@ DWORD WINAPI ClientMain(LPVOID arg)
 		// 데이터 받기
 		retval = recv(sock, buf, retval, MSG_WAITALL);
 		if (retval == SOCKET_ERROR) {
-			DisplayText("recv()");
+			DisplayError("recv()");
 			break;
 		}
 		else if (retval == 0)

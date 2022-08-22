@@ -121,7 +121,7 @@ int main(int argc, char *argv[])
 						ntohs(clientaddr.sin_port), ptr->buf);
 				}
 			}
-			if (FD_ISSET(ptr->sock, &wset)) {
+			else if (FD_ISSET(ptr->sock, &wset)) {
 				// 데이터 보내기
 				retval = send(ptr->sock, ptr->buf + ptr->sendbytes,
 					ptr->recvbytes - ptr->sendbytes, 0);

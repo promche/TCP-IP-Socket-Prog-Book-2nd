@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if (sock == INVALID_SOCKET) err_quit("socket()");
 
 	// 멀티캐스트 TTL 설정
-	int ttl = 2;
+	DWORD ttl = 2;
 	retval = setsockopt(sock, IPPROTO_IPV6, IPV6_MULTICAST_HOPS,
 		(const char *)&ttl, sizeof(ttl));
 	if (retval == SOCKET_ERROR) err_quit("setsockopt()");
