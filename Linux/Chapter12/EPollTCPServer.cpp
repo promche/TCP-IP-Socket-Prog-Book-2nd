@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 	fcntl(listen_sock, F_SETFL, flags);
 
 	// EPoll 인스턴스 생성
-	int epollfd = epoll_create(1); /* 전달 인수(> 0)는 무시됨 */ 
+	int epollfd = epoll_create(1); /* 전달 인수(> 0)는 무시됨 */
 	if (epollfd < 0) {
 		perror("epoll_create()");
 		exit(1);
@@ -154,7 +154,7 @@ int main(int argc, char *argv[])
 						}
 					}
 				}
-				if (events[i].events & EPOLLOUT) {
+				else if (events[i].events & EPOLLOUT) {
 					// 데이터 보내기
 					retval = send(ptr->sock, ptr->buf + ptr->sendbytes,
 						ptr->recvbytes - ptr->sendbytes, 0);
