@@ -1,0 +1,48 @@
+[위치] p.222 08번 문제
+[수정] AndSpintCount() -> AndSpinCount()
+
+
+[위치] p.299 03번 문제
+[수정] TCPServer -> UDPServer
+
+
+[위치] p.304 윈도우의 getsockopt() 함수 5번 인수 형태
+[수정] int optlen -> int *optlen
+
+
+[위치] p.385 GUITCPClient.cpp 139행과 147행
+[수정] DisplayText -> DisplayError
+
+
+[위치] p.409 SelectTCPServer.cpp 124행
+[수정] if (FD_ISSET(ptr->sock, &wset)) {
+       ->
+       else if (FD_ISSET(ptr->sock, &wset)) {
+[설명] 101행의 if문 안으로 들어가서 106행 또는 109행이 실행되는
+       상황이 생기면 소켓이 닫힙니다. 닫힌 소켓을 대상으로
+       124행을 독립적인 if문으로 수행하면 오류가 발생합니다.
+
+
+[위치] p.447 05번 문제
+[수정] WSAAsyncSelect 예제를 -> AsyncSelectTCPServer 예제를
+
+
+[위치] p.467 SelectTCPServer.cpp 125행
+[수정] if (FD_ISSET(ptr->sock, &wset)) {
+       ->
+       else if (FD_ISSET(ptr->sock, &wset)) {
+[설명] 102행의 if문 안으로 들어가서 107행 또는 110행이 실행되는
+       상황이 생기면 소켓이 닫힙니다. 닫힌 소켓을 대상으로
+       125행을 독립적인 if문으로 수행하면 오류가 발생합니다.
+
+
+[위치] p.478 PollTCPServer.cpp 125행
+[수정] if (Pollfds[i].revents & POLLOUT) {
+       ->
+       else if (Pollfds[i].revents & POLLOUT) {
+
+
+[위치] p.493 EPollTCPServer.cpp 157행
+[수정] if (events[i].events & EPOLLOUT) {
+       ->
+       else if (events[i].events & EPOLLOUT) {
